@@ -1,0 +1,108 @@
+V "GNAT Lib v16"
+A -O3
+A -gnatA
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_DISPATCH
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U generic_imgui%s	generic_imgui.ads	ba41263f NE OO PK GE IU
+W ada%s			ada.ads			ada.ali
+Z ada.finalization%s	a-finali.ads		a-finali.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+W dear_imgui.api%s	dear_imgui-api.ads	dear_imgui-api.ali
+W dear_imgui.backend_glfw%s  dear_imgui-backend_glfw.adb  dear_imgui-backend_glfw.ali
+W dear_imgui.backend_opengl3%s  dear_imgui-backend_opengl3.adb  dear_imgui-backend_opengl3.ali
+W dear_imgui.contexts%s	dear_imgui-contexts.adb	dear_imgui-contexts.ali
+W dear_imgui.drawing%s	dear_imgui-drawing.adb	dear_imgui-drawing.ali
+W dear_imgui.inputs%s	dear_imgui-inputs.adb	dear_imgui-inputs.ali
+W dear_imgui.types%s	dear_imgui-types.ads	dear_imgui-types.ali
+W dear_imgui.widgets%s	dear_imgui-widgets.adb	dear_imgui-widgets.ali
+W dear_imgui.windows%s	dear_imgui-windows.adb	dear_imgui-windows.ali
+W glfw%s		glfw.adb		glfw.ali
+Z glfw.monitors%s	glfw-monitors.adb	glfw-monitors.ali
+Z glfw.windows%s	glfw-windows.adb	glfw-windows.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+Z interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+Z interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+Z system%s		system.ads		system.ali
+
+D ada.ads		20260610194523 76789da1 ada%s
+D a-finali.ads		20260610194523 099c16e4 ada.finalization%s
+D a-string.ads		20260610194523 90ac6797 ada.strings%s
+D a-sttebu.ads		20260610194523 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20260610194523 c6ced0ae ada.strings.utf_encoding%s
+D a-unccon.ads		20260610194523 0e9b276f ada.unchecked_conversion%s
+D dear_imgui.ads	20260919162852 0c015b54 dear_imgui%s
+D dear_imgui-api.ads	20260919162852 ecc20958 dear_imgui.api%s
+D dear_imgui-backend_glfw.ads  20260919162852 d2889771 dear_imgui.backend_glfw%s
+D dear_imgui-backend_opengl3.ads  20260919162852 04cdc73c dear_imgui.backend_opengl3%s
+D dear_imgui-contexts.ads  20260919162852 ff608355 dear_imgui.contexts%s
+D dear_imgui-drawing.ads  20260919162852 776567e9 dear_imgui.drawing%s
+D dear_imgui-inputs.ads	20260919162852 20be5a25 dear_imgui.inputs%s
+D dear_imgui-types.ads	20260919162852 705d43f5 dear_imgui.types%s
+D dear_imgui-widgets.ads  20260919162852 d8607800 dear_imgui.widgets%s
+D dear_imgui-windows.ads  20260919162852 547ad414 dear_imgui.windows%s
+D generic_imgui.ads	20260919162852 d43a2e52 generic_imgui%s
+D glfw.ads		20210518101229 ada68d8e glfw%s
+D glfw-input.ads	20210518101229 cc20d32a glfw.input%s
+D glfw-input-keys.ads	20210518101229 b0d52173 glfw.input.keys%s
+D glfw-input-mouse.ads	20210518101229 725dacf3 glfw.input.mouse%s
+D glfw-monitors.ads	20210518101229 8a5ba4bb glfw.monitors%s
+D glfw-windows.ads	20210518101229 12766f7a glfw.windows%s
+D interfac.ads		20260610194523 9111f9c1 interfaces%s
+D i-c.ads		20260610194523 dbdd3be7 interfaces.c%s
+D i-cexten.ads		20260610194523 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20260610194523 49eced87 interfaces.c.strings%s
+D system.ads		20260610194523 8a611ac3 system%s
+D s-finroo.ads		20260610194523 0a7c3ed4 system.finalization_root%s
+D s-parame.ads		20260610194523 a1aeab5c system.parameters%s
+G a e
+X 7 dear_imgui.ads
+17k9*Dear_ImGui 128e15 17|7r6 8r6 9r6 10r6 11r6 12r6 13r6 14r6 15r6 27r27
+X 8 dear_imgui-api.ads
+11k20 API 10649e19 17|7w17
+X 9 dear_imgui-backend_glfw.ads
+16k20 Backend_Glfw 185e28 17|8w17
+X 10 dear_imgui-backend_opengl3.ads
+14k20 Backend_OpenGL3 83e31 17|9w17
+X 11 dear_imgui-contexts.ads
+17k20 Contexts 98e24 17|10w17
+X 12 dear_imgui-drawing.ads
+15k20 Drawing 66e23 17|11w17
+X 13 dear_imgui-inputs.ads
+16k20 Inputs 155e22 17|12w17
+X 14 dear_imgui-types.ads
+6k20 Types 473e21 17|13w17
+X 15 dear_imgui-widgets.ads
+14k20 Widgets 625e23 17|14w17
+X 16 dear_imgui-windows.ads
+15k20 Windows 122e23 17|15w17
+X 17 generic_imgui.ads
+20F14 T_Float 27r39
+22k9*Generic_ImGui 20z14 43l5 43e18
+27K17*IG[7|17] 29r40 30r40 32r40 33r40 34r40 35r40 37r40 38r40 39r40
+29K17*API[8|11] 33r60 34r52 35r52 37r53
+30K17*Types[14|6] 35r57 38r53 39r53
+32K17*Backend_Glfw[9|16]
+33K17*Backend_OpenGL3[10|14]
+34K17*Drawing[12|15]
+35K17*Inputs[13|16] 37r58
+37K17*Contexts[11|17]
+38K17*Widgets[15|14]
+39K17*Windows[16|15]
+

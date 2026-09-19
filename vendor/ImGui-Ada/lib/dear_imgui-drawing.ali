@@ -1,0 +1,60 @@
+V "GNAT Lib v16"
+A -O3
+A -gnatA
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U dear_imgui.drawing%b	dear_imgui-drawing.adb	3d560e3a NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+
+U dear_imgui.drawing%s	dear_imgui-drawing.ads	97a635e5 BN EE NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+W dear_imgui.api%s	dear_imgui-api.ads	dear_imgui-api.ali
+
+D ada.ads		20260610194523 76789da1 ada%s
+D a-unccon.ads		20260610194523 0e9b276f ada.unchecked_conversion%s
+D dear_imgui.ads	20260919162852 0c015b54 dear_imgui%s
+D dear_imgui-api.ads	20260919162852 ecc20958 dear_imgui.api%s
+D dear_imgui-drawing.ads  20260919162852 776567e9 dear_imgui.drawing%s
+D dear_imgui-drawing.adb  20260919162852 4a3369d3 dear_imgui.drawing%b
+D interfac.ads		20260610194523 9111f9c1 interfaces%s
+D i-c.ads		20260610194523 dbdd3be7 interfaces.c%s
+D i-cexten.ads		20260610194523 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20260610194523 49eced87 interfaces.c.strings%s
+D system.ads		20260610194523 8a611ac3 system%s
+D s-exctab.ads		20260610194523 91bef6ef system.exception_table%s
+D s-parame.ads		20260610194523 a1aeab5c system.parameters%s
+D s-stalib.ads		20260610194523 1c9580f6 system.standard_library%s
+G a e
+G c Z s b [drawing dear_imgui 15 20 none]
+X 3 dear_imgui.ads
+17k9*Dear_ImGui 128e15 5|7r6 13r35 15r9 66r5 6|7r14 26r5
+39X9*EX_WINDOW_STILL_ACTIVE 6|17r31
+124i9 G_Window_Count{natural} 6|16r20
+X 4 dear_imgui-api.ads
+11k20 API 10649e19 5|7w17
+46R9 ImDrawData 5|36r52[13] 54r54[13] 62r52[13]
+1284R9 ImDrawData
+X 5 dear_imgui-drawing.ads
+13K22 P_API[4|11] 36r46 54r48 62r46
+15k20 Drawing 3|17k9 5|13z22 46E19 66l16 66e23 6|7b25 26l16 26t23
+24U19*Begin_Frame 60b19
+30U19*Render 6|13b19 22l13 22t19
+36V18*Get_Draw_Data(4|1284R9[13]) 62b18
+46U19 API_NewFrame 60r39
+50U19 API_Render 6|20s17
+54V18 API_GetDrawData(4|1284R9[13]) 62r71
+

@@ -1,0 +1,37 @@
+V "GNAT Lib v16"
+A -O3
+A -gnatA
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U imgui_config%s	imgui_config.ads	73470afd NE OO PU PK
+
+D imgui_config.ads	20260919162905 73470afd imgui_config%s
+D system.ads		20260610194523 8a611ac3 system%s
+G a e
+X 1 imgui_config.ads
+5K9*Imgui_Config 20l5 20e17
+8a4*Crate_Version{string}
+9a4*Crate_Name{string}
+11a4*Alire_Host_OS{string}
+13a4*Alire_Host_Arch{string}
+15a4*Alire_Host_Distro{string}
+17E9*Build_Profile_Kind 17e65 18r29
+17n32*release{17E9} 18r51
+17n41*validation{17E9}
+17n53*development{17E9}
+18e4*Build_Profile{17E9}
+

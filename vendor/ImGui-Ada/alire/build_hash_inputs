@@ -1,0 +1,2 @@
+profile:imgui=RELEASE
+switches:imgui=-O3,-fdata-sections,-ffunction-sections,-gnatW8,-gnatn

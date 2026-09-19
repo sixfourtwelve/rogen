@@ -1,0 +1,291 @@
+V "GNAT Lib v16"
+A -O3
+A -gnatA
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U dear_imgui.widgets%b	dear_imgui-widgets.adb	a225df3e NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+Z system%s		system.ads		system.ali
+
+U dear_imgui.widgets%s	dear_imgui-widgets.ads	a43c60a1 BN EE NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+W dear_imgui.types%s	dear_imgui-types.ads	dear_imgui-types.ali
+
+D ada.ads		20260610194523 76789da1 ada%s
+D a-unccon.ads		20260610194523 0e9b276f ada.unchecked_conversion%s
+D dear_imgui.ads	20260919162852 0c015b54 dear_imgui%s
+D dear_imgui-types.ads	20260919162852 705d43f5 dear_imgui.types%s
+D dear_imgui-widgets.ads  20260919162852 d8607800 dear_imgui.widgets%s
+D dear_imgui-widgets.adb  20260919162852 7a45a73e dear_imgui.widgets%b
+D interfac.ads		20260610194523 9111f9c1 interfaces%s
+D i-c.ads		20260610194523 dbdd3be7 interfaces.c%s
+D i-cexten.ads		20260610194523 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20260610194523 49eced87 interfaces.c.strings%s
+D system.ads		20260610194523 8a611ac3 system%s
+D s-exctab.ads		20260610194523 91bef6ef system.exception_table%s
+D s-parame.ads		20260610194523 a1aeab5c system.parameters%s
+D s-stalib.ads		20260610194523 1c9580f6 system.standard_library%s
+G a e
+G c Z s b [widgets dear_imgui 14 20 none]
+X 3 dear_imgui.ads
+15F14 T_Float 5|33r47 53r40 54r40 187r35 188r35 199r35 200r35 414r54 425r40
+. 426r40 489r33 490r33 491r33 606r40 607r40 6|15r47 155r35 156r35 185r35
+. 186r35
+17k9*Dear_ImGui 128e15 5|7r6 12r37 14r9 625r5 6|7r14 469r5
+41X9*EX_NO_ACTIVE_MENU_BAR 6|436r31
+43X9*EX_NO_ACTIVE_TAB_BAR 6|448r31
+47I17*T_Integer{8|62I9} 5|479r35 480r31 6|124r39 131r96
+51M17*T_Unsigned{8|71M9}
+52B17*T_Bool{9|60E12} 5|459r18 465r32 466r18 472r29 473r18 481r18 494r18
+. 504r18 512r18 525r42 535r30 535r40 536r18 547r31 547r41 548r31 548r41 549r18
+. 556r37 557r37 557r47 558r18 574r40 581r18 591r33 593r18 6|79r39 113r76
+. 294r74 318r79 318r98 329r42 336r98 402r41 402r51 457r40
+55E17*T_Char{8|109E9} 5|546r35 555r37
+75P17 T_Chars_Ptr{10|65P9} 5|444r38 450r26 457r28 464r28 471r29 478r31 488r33
+. 492r33 501r32 509r32 534r30 545r31 554r37 579r29 590r29 6|161r30
+88V18 Buffer_String{75P17} 6|33s27 46s42 69s45 86s47 113s50 131s50 168s39
+. 172s35 211s49 240s49 294s48 318s47 336s50 368s50 463s51
+105U19 Enforce_Active_Window 6|18s17 31s17 44s17 67s17 84s17 111s17 129s17
+. 165s17 209s17 238s17 265s17 364s17
+116p9 C_Null_Ptr{75P17} 6|161r45
+X 4 dear_imgui-types.ads
+6k20 Types 473e21 5|7w17
+17M17 T_ColourEdit_Flag{3|51M17} 5|218r33[12] 228r33[12] 238r33[12] 248r33[12]
+. 503r32[12] 511r32[12] 6|205r33[5|12] 219r33[5|12] 234r33[5|12] 248r33[5|12]
+20M17 T_Slider_Flag{3|51M17} 5|190r35[12] 202r35[12] 493r33[12] 6|158r35[5|12]
+. 188r35[5|12]
+21M17 T_Tab_Bar_Flag{3|51M17} 5|362r28[12] 379r28[12] 392r34[12] 580r29[12]
+. 6|360r28[5|12] 387r28[5|12] 399r34[5|12]
+22M17 T_Tab_Item_Flag{3|51M17} 5|573r36[12] 592r29[12] 6|456r36[5|12]
+26R14 T_Colour_RGB 5|217r33[12] 227r33[12] 502r32[12] 6|204r33[5|12] 218r33[5|12]
+31R14 T_Colour_RGBA 5|237r33[12] 247r33[12] 510r32[12] 6|233r33[5|12] 247r33[5|12]
+36R14 T_Vector2 5|110r28[12] 458r28[12] 6|63r28[5|12]
+46R14 T_Vector4 5|92r29[12] 449r26[12] 6|40r29[5|12]
+375m5 C_ColourEdit_Flag_None{17M17[5|12]} 5|218r54[12] 228r54[12] 238r54[12]
+. 248r54[12] 6|205r54[5|12] 219r54[5|12] 234r54[5|12] 248r54[5|12]
+443m9 C_Slider_Flag_None{20M17[5|12]} 5|190r52[12] 202r52[12] 6|158r52[5|12]
+. 188r52[5|12]
+449m9 C_Tab_Bar_Flag_None{21M17[5|12]} 5|362r46[12] 6|360r46[5|12]
+461m9 C_Tab_Item_Flag_None{22M17[5|12]} 5|379r46[12] 392r52[12] 6|387r46[5|12]
+. 399r52[5|12]
+X 5 dear_imgui-widgets.ads
+12K22 P_Types[4|6] 19r13
+14k20 Widgets 3|17k9 5|12z22 414E19 625l16 625e23 6|7b25 469l16 469t23
+33U19*Push_Item_Width 33>36 6|15b19 22l13 22t28
+33*36 Width{3|15F14} 6|15b36 20r36
+44U19*Separator 603b19
+52U19*Same_Line 53>17 54>17 605b19
+53*17 Offset_From_Start{3|15F14} 606b17
+54*17 Spacing{3|15F14} 607b17
+61U19*New_Line 610b19
+69U19*Begin_Group 612b19
+76U19*End_Group 614b19
+84U19*Text 84>25 6|28b19 35l13 35t17
+84a25 Text{string} 6|28b25 33r42
+90U19*Text 91>17 92>17 6|38b19 48l13 48t17
+91a17 Text{string} 6|39b17 46r57
+92r17 Colour{4|46R14[12]} 6|40b17 46r34
+101V18*Button{boolean} 101>26 6|53b18 58l13 58t19
+101a26 Label{string} 6|53b26 56r32
+108V18*Button{boolean} 109>17 110>17 6|56s24 61b18 71l13 71t19
+109a17 Label{string} 6|62b17 69r60
+110r17 Size{4|36R14[12]} 6|63b17 69r71
+117V18*Checkbox{boolean} 118>17 119=17 6|74b18 88l13 88t21 100s34
+118a17 Label{string} 6|75b17 86r62
+119b17 State{boolean} 6|76b17 80m33 80r33
+126U19*Checkbox 127>17 128=17 6|91b19 102l13 102t21
+127a17 Label{string} 6|92b17 100r44
+128b17 State{boolean} 6|93b17 100m51 100r51
+135V18*Radio_Button{boolean} 136>17 137>17 6|105b18 115l13 115t25
+136a17 Label{string} 6|106b17 113r65
+137b17 State{boolean} 6|107b17 113r84
+146V18*Radio_Button{boolean} 147>17 148=17 149>17 6|118b18 133l13 133t25
+. 146s34
+147a17 Label{string} 6|119b17 131r65
+148i17 State{integer} 6|120b17 125m33 125r33
+149i17 Value{integer} 6|121b17 131r107
+156U19*Radio_Button 157>17 158=17 159>17 6|136b19 148l13 148t25
+157a17 Label{string} 6|137b17 146r48
+158i17 State{integer} 6|138b17 146m55 146r55
+159i17 Value{integer} 6|139b17 146r62
+185V18*Slider_Float{boolean} 186>17 187=17 188>17 188>22 189>17 190>17 6|153b18
+. 180l13 180t25 195s34
+186a17 Label{string} 6|154b17 172r50
+187*17 Value{3|15F14} 6|155b17 173m35 173r35
+188*17 Min{3|15F14} 6|156b17 174r35
+188*22 Max{3|15F14} 6|156b22 175r35
+189a17 Format{string} 6|157b17 167r20 168r54
+190m17 Flags{4|20M17[12]} 6|158b17 177r35
+197U19*Slider_Float 198>17 199=17 200>17 200>22 201>17 202>17 6|183b19 197l13
+. 197t25
+198a17 Label{string} 6|184b17 195r48
+199*17 Value{3|15F14} 6|185b17 195m55 195r55
+200*17 Min{3|15F14} 6|186b17 195r62
+200*22 Max{3|15F14} 6|186b22 195r67
+201a17 Format{string} 6|187b17 195r72
+202m17 Flags{4|20M17[12]} 6|188b17 195r80
+215V18*Colour_Edit_RGB{boolean} 216>17 217=17 218>17 6|202b18 213l13 213t28
+. 226s34
+216a17 Label{string} 6|203b17 211r64
+217r17 Colour{4|26R14[12]} 6|204b17 211m75 211r75
+218m17 Flags{4|17M17[12]} 6|205b17 211r83
+225U19*Colour_Edit_RGB 226>17 227=17 228>17 6|216b19 228l13 228t28
+226a17 Label{string} 6|217b17 226r51
+227r17 Colour{4|26R14[12]} 6|218b17 226m58 226r58
+228m17 Flags{4|17M17[12]} 6|219b17 226r66
+235V18*Colour_Edit_RGBA{boolean} 236>17 237=17 238>17 6|231b18 242l13 242t29
+. 255s34
+236a17 Label{string} 6|232b17 240r64
+237r17 Colour{4|31R14[12]} 6|233b17 240m75 240r75
+238m17 Flags{4|17M17[12]} 6|234b17 240r83
+245U19*Colour_Edit_RGBA 246>17 247=17 248>17 6|245b19 257l13 257t29
+246a17 Label{string} 6|246b17 255r52
+247r17 Colour{4|31R14[12]} 6|247b17 255m59 255r59
+248m17 Flags{4|17M17[12]} 6|248b17 255r67
+278V18*Begin_Menu_Bar{boolean} 6|262b18 271l13 271t27
+286U19*End_Menu_Bar 6|274b19 283l13 283t25
+294V18*Begin_Menu{boolean} 295>17 296>17 6|286b18 296l13 296t23
+295a17 Label{string} 6|287b17 294r63
+296b17 Enabled{boolean} 6|288b17 294r82
+305U19*End_Menu 6|299b19 306l13 306t21
+314V18*Menu_Item{boolean} 315>17 316>17 317>17 6|309b18 320l13 320t22
+315a17 Label{string} 6|310b17 318r62
+316b17 Selected{boolean} 6|311b17 318r87
+317b17 Enabled{boolean} 6|312b17 318r106
+326V18*Menu_Item_Toggle{boolean} 327>17 328=17 329>17 6|323b18 338l13 338t29
+. 351s32
+327a17 Label{string} 6|324b17 336r65
+328b17 Selected{boolean} 6|325b17 330m33 330r33
+329b17 Enabled{boolean} 6|326b17 336r106
+336U19*Menu_Item_Toggle 337>17 338=17 339>17 6|341b19 353l13 353t29
+337a17 Label{string} 6|342b17 351r50
+338b17 Selected{boolean} 6|343b17 351m57 351r57
+339b17 Enabled{boolean} 6|344b17 351r67
+360V18*Begin_Tab_Bar{boolean} 361>17 362>17 6|358b18 370l13 370t26
+361a17 Label{string} 6|359b17 368r65
+362m17 Flags{4|21M17[12]} 6|360b17 368r76
+370U19*End_Tab_Bar 6|373b19 382l13 382t24
+377V18*Begin_Tab_Item{boolean} 378>17 379>17 6|385b18 393l13 393t27
+378a17 Label{string} 6|386b17 391r49
+379m17 Flags{4|21M17[12]} 6|387b17 391r56
+389V18*Begin_Tab_Item{boolean} 390>17 391<17 392>17 6|396b18 413l13 413t27
+390a17 Label{string} 6|397b17 408r65
+391b17 Is_Open{boolean} 6|398b17 409m25
+392m17 Flags{4|21M17[12]} 6|399b17 408r72
+401U19*End_Tab_Item 6|416b19 421l13 421t25
+414U19 API_PushItemWidth 414>38 6|20s17
+414*38 item_width{3|15F14}
+420U19 API_Separator 603r37
+424U19 API_SameLine 425>17 426>17 608r19
+425*17 offset_from_start{3|15F14}
+426*17 spacing{3|15F14}
+430U19 API_NewLine 610r36
+434U19 API_BeginGroup 612r39
+438U19 API_EndGroup 614r37
+444U19 API_Text 444>29 6|33s17
+444p29 fmt{3|75P17}
+448U19 API_TextColored 449>17 450>17 6|46s17
+449r17 col{4|46R14[12]}
+450p17 fmt{3|75P17}
+456V18 API_Button{3|52E17} 457>17 458>17 6|69s33
+457p17 label{3|75P17}
+458r17 size{4|36R14[12]}
+463V18 API_Checkbox{3|52E17} 464>17 465^17 6|86s33
+464p17 label{3|75P17}
+465p17 value(3|52E17)
+470V18 API_RadioButton{3|52E17} 471>17 472>17 6|113s33
+471p17 label{3|75P17}
+472b17 active{3|52E17}
+477V18 API_RadioButton{3|52E17} 478>17 479^17 480>17 6|131s33
+478p17 label{3|75P17}
+479p17 v(3|47I17)
+480i17 v_button{3|47I17}
+487V18 API_SliderFloat{3|52E17} 488>17 489=17 490>17 491>17 492>17 493>17
+. 6|171s33
+488p17 label{3|75P17} 6|172r25
+489*17 v{3|15F14} 6|173r25
+490*17 v_min{3|15F14} 6|174r25
+491*17 v_max{3|15F14} 6|175r25
+492p17 format{3|75P17} 6|176r25
+493m17 flags{4|20M17[12]} 6|177r25
+500V18 API_ColorEdit3{3|52E17} 501>17 502=17 503>17 6|211s33
+501p17 label{3|75P17}
+502r17 col{4|26R14[12]}
+503m17 flags{4|17M17[12]}
+508V18 API_ColorEdit4{3|52E17} 509>17 510=17 511>17 6|240s33
+509p17 label{3|75P17}
+510r17 col{4|31R14[12]}
+511m17 flags{4|17M17[12]}
+521U19 Enforce_Active_Menu_Bar 6|277s17 292s17 302s17 316s17 334s17 432b19
+. 439l13 439t36
+525V18 API_BeginMenuBar{3|52E17} 6|269s33
+529U19 API_EndMenuBar 6|279s17
+533V18 API_BeginMenu{3|52E17} 534>17 535>17 6|294s33
+534p17 label{3|75P17}
+535b17 enabled{3|52E17}
+540U19 API_EndMenu 6|304s17
+544V18 API_MenuItem{3|52E17} 545>17 546^17 547>17 548>17 6|318s33
+545p17 label{3|75P17}
+546p17 shortcut(3|55E17)
+547b17 selected{3|52E17}
+548b17 enabled{3|52E17}
+553V18 API_MenuItemPtr{3|52E17} 554>17 555^17 556=17 557>17 6|336s33
+554p17 label{3|75P17}
+555p17 shortcut(3|55E17)
+556b17 p_selected{3|52E17}
+557b17 enabled{3|52E17}
+567U19 Enforce_Active_Tab_Bar 6|376s17 444b19 451l13 451t35 461s17
+571V18 Begin_Tab_Item_Internal{boolean} 572>17 573>17 574^17 6|391s24 408s40
+. 454b18 465l13 465t36
+572a17 Label{string} 6|455b17 463r66
+573m17 Flags{4|22M17[12]} 6|456b17 463r92
+574p17 Open_Internal(3|52E17) 6|457b17 463r77
+578V18 API_BeginTabBar{3|52E17} 579>17 580>17 6|368s33
+579p17 str_id{3|75P17}
+580m17 flags{4|21M17[12]}
+585U19 API_EndTabBar 6|378s17
+589V18 API_BeginTabItem{3|52E17} 590>17 591^17 592>17 6|463s33
+590p17 label{3|75P17}
+591p17 p_open(3|52E17)
+592m17 flags{4|22M17[12]}
+597U19 API_EndTabItem 6|419s17
+619i9 G_Menu_Bar_Count{natural} 6|267m17 267r37 281m17 281r37 435r20
+621i9 G_Tab_Bar_Count{natural} 6|366m17 366r36 380m17 380r36 447r20
+X 6 dear_imgui-widgets.adb
+79b17 Local_State{3|52E17} 86m73 86r73
+96b17 Dummy_Changed{boolean} 100m17
+124i17 Local_State{3|47I17} 131m76 131r76
+142b17 Dummy_Changed{boolean} 146m17
+161p17 Format_Ptr{3|75P17} 168m25 176r35
+191b17 Dummy_Changed{boolean} 195m17
+222b17 Dummy_Changed{boolean} 226m17
+251b17 Dummy_Changed{boolean} 255m17
+329b17 Local_Selected{3|52E17} 336m82 336r82
+347b17 Dummy_State{boolean} 351m17
+402b17 Open_Internal{3|52E17} 408m79 408r79 409r49
+406b24 Is_Selected{boolean} 408m25
+X 8 i-c.ads
+62I9*int<integer>
+71M9*unsigned
+96B9*C_bool<boolean>
+109E9*char<character>
+X 9 i-cexten.ads
+60B12*bool{8|96E9}
+X 10 i-cstrin.ads
+65P9*chars_ptr
+

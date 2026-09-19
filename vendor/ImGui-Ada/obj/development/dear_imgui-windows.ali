@@ -1,0 +1,139 @@
+V "GNAT Lib v16"
+A -Og
+A -gnatA
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U dear_imgui.windows%b	dear_imgui-windows.adb	0de9b736 NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+
+U dear_imgui.windows%s	dear_imgui-windows.ads	2826ccb5 BN EE NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+W dear_imgui.types%s	dear_imgui-types.ads	dear_imgui-types.ali
+
+D ada.ads		20260610194523 76789da1 ada%s
+D a-unccon.ads		20260610194523 0e9b276f ada.unchecked_conversion%s
+D dear_imgui.ads	20260804204853 0c015b54 dear_imgui%s
+D dear_imgui-types.ads	20260804204853 705d43f5 dear_imgui.types%s
+D dear_imgui-windows.ads  20260804204853 547ad414 dear_imgui.windows%s
+D dear_imgui-windows.adb  20260804204853 59936322 dear_imgui.windows%b
+D interfac.ads		20260610194523 9111f9c1 interfaces%s
+D i-c.ads		20260610194523 dbdd3be7 interfaces.c%s
+D i-cexten.ads		20260610194523 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20260610194523 49eced87 interfaces.c.strings%s
+D system.ads		20260610194523 8a611ac3 system%s
+D s-exctab.ads		20260610194523 91bef6ef system.exception_table%s
+D s-parame.ads		20260610194523 a1aeab5c system.parameters%s
+D s-stalib.ads		20260610194523 1c9580f6 system.standard_library%s
+G a e
+G c Z s b [windows dear_imgui 15 20 none]
+X 3 dear_imgui.ads
+15F14 T_Float 5|64r32 65r32 76r32 77r32 6|56r32 57r32 70r32 71r32
+17k9*Dear_ImGui 128e15 5|7r6 13r37 15r9 122r5 6|7r14 103r5
+51M17*T_Unsigned{8|71M9}
+52B17*T_Bool{9|60E12} 5|92r40 98r33 100r18 6|31r41 31r51 91r40
+75P17 T_Chars_Ptr{10|65P9} 5|97r29
+88V18 Buffer_String{75P17} 6|97s44
+105U19 Enforce_Active_Window 6|46s17
+124i9 G_Window_Count{natural} 6|50m17 50r35 95m17 95r35
+X 4 dear_imgui-types.ads
+6k20 Types 473e21 5|7w17
+19M17 T_Window_Flag{3|51M17} 5|33r28[13] 47r34[13] 91r36[13] 99r29[13] 6|15r28[5|13]
+. 26r34[5|13] 90r36[5|13]
+24F17 T_Float_Norm{3|15F14} 5|67r32[13] 68r32[13] 6|59r32[5|13] 60r32[5|13]
+36R14 T_Vector2 5|109r28[13] 111r28[13] 116r27[13]
+51E14 T_Condition 5|66r32[13] 78r32[13] 110r28[13] 117r27[13] 6|58r32[5|13]
+. 72r32[5|13]
+54n17 E_Once{51E14[5|13]} 5|66r48[13] 78r47[13] 6|58r48[5|13] 72r47[5|13]
+418m9 C_Window_Flag_None{19M17[5|13]} 5|33r45[13] 47r51[13] 6|15r45[5|13]
+. 26r51[5|13]
+X 5 dear_imgui-windows.ads
+13K22 P_Types[4|6] 20r13
+15k20 Windows 3|17k9 5|13z22 89E9 122l16 122e23 6|7b25 103l16 103t23
+31V18*Begin_Window{boolean} 32>17 33>17 6|13b18 21l13 21t25
+32a17 Title{string} 6|14b17 19r47
+33m17 Flags{4|19M17[13]} 6|15b17 19r54
+45V18*Begin_Window{boolean} 46>17 47>17 48<17 6|24b18 40l13 40t25
+46a17 Title{string} 6|25b17 35r54
+47m17 Flags{4|19M17[13]} 6|26b17 35r61
+48b17 Is_Open{boolean} 6|27b17 36m17
+55U19*End_Window 6|43b19 52l13 52t23
+63U19*Set_Next_Window_Position 64>17 65>17 66>17 67>17 68>17 6|55b19 66l13
+. 66t37
+64*17 X{3|15F14} 6|56b17 64r40
+65*17 Y{3|15F14} 6|57b17 64r43
+66e17 Condition{4|51E14[13]} 6|58b17 64r47
+67*17 Pivot_X{4|24F17[13]} 6|59b17 64r59
+68*17 Pivot_Y{4|24F17[13]} 6|60b17 64r68
+75U19*Set_Next_Window_Size 76>17 77>17 78>17 6|69b19 78l13 78t33
+76*17 Width{3|15F14} 6|70b17 76r41
+77*17 Height{3|15F14} 6|71b17 76r48
+78e17 Condition{4|51E14[13]} 6|72b17 76r57
+89V18 Begin_Window_Internal{boolean} 90>17 91>17 92^17 6|19s24 35s31 88b18
+. 99l13 99t34
+90a17 Title{string} 6|89b17 97r59
+91m17 Flags{4|19M17[13]} 6|90b17 97r85
+92p17 Open_Internal(3|52E17) 6|91b17 97r70
+96V18 API_Begin{3|52E17} 97>17 98^17 99>17 6|97s33
+97p17 name{3|75P17}
+98p17 p_open(3|52E17)
+99m17 flags{4|19M17[13]}
+104U19 API_End 6|48s17
+108U19 API_SetNextWindowPos 109>17 110>17 111>17 6|64s17
+109r17 pos{4|36R14[13]}
+110e17 cond{4|51E14[13]}
+111r17 pivot{4|36R14[13]}
+115U19 API_SetNextWindowSize 116>17 117>17 6|76s17
+116r17 size{4|36R14[13]}
+117e17 cond{4|51E14[13]}
+X 6 dear_imgui-windows.adb
+30b17 Is_Visible{boolean} 35m17 38r24
+31b17 Open_Internal{3|52E17} 35m68 35r68 36r40
+X 8 i-c.ads
+71M9*unsigned
+96B9*C_bool<boolean>
+X 9 i-cexten.ads
+60B12*bool{8|96E9}
+X 10 i-cstrin.ads
+65P9*chars_ptr
+

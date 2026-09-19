@@ -1,0 +1,123 @@
+V "GNAT Lib v16"
+A -Og
+A -gnatA
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U dear_imgui.contexts%b	dear_imgui-contexts.adb	6de2fc64 NE OO PK GE
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+
+U dear_imgui.contexts%s	dear_imgui-contexts.ads	3f1d8b7c BN EE NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+W dear_imgui.api%s	dear_imgui-api.ads	dear_imgui-api.ali
+W dear_imgui.inputs%s	dear_imgui-inputs.adb	dear_imgui-inputs.ali
+
+D ada.ads		20260610194523 76789da1 ada%s
+D a-except.ads		20260610194523 8699d7ff ada.exceptions%s
+D a-string.ads		20260610194523 90ac6797 ada.strings%s
+D a-sttebu.ads		20260610194523 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20260610194523 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20260610194523 2dbf449c ada.tags%s
+D a-unccon.ads		20260610194523 0e9b276f ada.unchecked_conversion%s
+D dear_imgui.ads	20260804204853 0c015b54 dear_imgui%s
+D dear_imgui-api.ads	20260804204853 ecc20958 dear_imgui.api%s
+D dear_imgui-contexts.ads  20260804205929 ff608355 dear_imgui.contexts%s
+D dear_imgui-contexts.adb  20260804204853 92827f31 dear_imgui.contexts%b
+D dear_imgui-inputs.ads	20260804204853 20be5a25 dear_imgui.inputs%s
+D dear_imgui-types.ads	20260804204853 705d43f5 dear_imgui.types%s
+D interfac.ads		20260610194523 9111f9c1 interfaces%s
+D i-c.ads		20260610194523 dbdd3be7 interfaces.c%s
+D i-cexten.ads		20260610194523 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20260610194523 49eced87 interfaces.c.strings%s
+D system.ads		20260610194523 8a611ac3 system%s
+D s-exctab.ads		20260610194523 91bef6ef system.exception_table%s
+D s-parame.ads		20260610194523 a1aeab5c system.parameters%s
+D s-secsta.ads		20260610194523 578279f5 system.secondary_stack%s
+D s-soflin.ads		20260610194523 5d88fdea system.soft_links%s
+D s-stache.ads		20260610194523 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20260610194523 1c9580f6 system.standard_library%s
+D s-stoele.ads		20260610194523 ccded4e8 system.storage_elements%s
+D s-traent.ads		20260610194523 c81cbf8c system.traceback_entries%s
+G a e
+G c Z s b [contexts dear_imgui 17 20 none]
+X 8 dear_imgui.ads
+17k9*Dear_ImGui 128e15 10|7r6 8r6 13r38 14r38 17r9 98r5 11|7r14 79r5
+35X9*EX_CONTEXT_ALREADY_CREATED 11|40r31
+36X9*EX_NO_CONTEXT_FOUND 11|68r31
+X 9 dear_imgui-api.ads
+11k20 API 10649e19 10|7w17
+52R9 ImFontAtlas 10|84r70[13]
+58R9 ImGuiContext 10|77r43[13] 84r111[13] 88r62[13]
+926R9 ImGuiIO
+1390R9 ImFontAtlas
+2475R9 ImGuiContext
+2478r7 IO{926R9[10|13]} 11|19m52[10|13]
+X 10 dear_imgui-contexts.ads
+13K22 P_API[9|11] 15r27 77r37 84r64 84r105 88r56
+14K22 P_Inputs[12|16] 28r74 11|15r66
+17k20 Contexts 8|17k9 10|13z22 14z22 76E14 98l16 98e24 11|7b25 79l16 79t24
+22R14*T_ImGuiContext 28p26 28r51 34p26 34r55 51p19 51r45 66p19 66r45 76c14
+. 78e19 94r26 11|15r43 25r47 48r45 64r45
+28V26*Get_IO{12|26R14[14]} 28=34 11|15b18 22l13 22t19
+28r34 Context{22R14} 11|15b26 19r33
+34V26*Is_Initialised{boolean} 34>42 11|25b18 30l13 30t27
+34r42 Context{22R14} 11|25b34 28r25
+44U19*Initialise 11|36b19 45l13 45t23
+51U19*Initialise 51<31 11|43s17 48b19 53l13 53t23
+51r31 Context{22R14} 11|48b31 51m17
+58U19*Destroy 11|56b19 61l13 61t20
+66U19*Destroy 66=28 11|59s17 64b19 75l13 75t20
+66r28 Context{22R14} 11|64b28 67r20 71m37 71r37 73m17
+77p17 m_Internal(9|2475R9[13]) 11|19r41 28r33 39r35 51m25 67r28 71r45 73m25
+84V18 API_CreateContext(9|2475R9[13]) 84^37 11|51s39
+84p37 Shared_Font_Atlas(9|1390R9[13])
+88U19 API_DestroyContext 88^39 11|71s17
+88p39 Context(9|2475R9[13])
+94r9 G_Main_Context{22R14} 11|39r20 43m29 59m26 59r26
+X 12 dear_imgui-inputs.ads
+13K22 P_API 10|15r18
+16k20 Inputs 10|8w17 12|155e22
+26R14 T_ImGuiIO 10|28r83[14] 11|15r75[10|14]
+27p17 m_IO(9|926R9[10|13]) 11|19m25[10|14]
+

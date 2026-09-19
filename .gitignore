@@ -1,0 +1,9 @@
+/obj/
+/bin/
+/alire/
+/config/
+/vendor/openglada/obj/
+/vendor/openglada/lib/
+/vendor/openglada/alire/
+/vendor/openglada/config/
+.vscode

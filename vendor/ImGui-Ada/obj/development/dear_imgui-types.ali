@@ -1,0 +1,335 @@
+V "GNAT Lib v16"
+A -Og
+A -gnatA
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U dear_imgui.types%s	dear_imgui-types.ads	7c5c18a1 NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+
+D dear_imgui.ads	20260804204853 0c015b54 dear_imgui%s
+D dear_imgui-types.ads	20260804204853 705d43f5 dear_imgui.types%s
+D interfac.ads		20260610194523 9111f9c1 interfaces%s
+D i-c.ads		20260610194523 dbdd3be7 interfaces.c%s
+D i-cexten.ads		20260610194523 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20260610194523 49eced87 interfaces.c.strings%s
+D system.ads		20260610194523 8a611ac3 system%s
+D s-parame.ads		20260610194523 a1aeab5c system.parameters%s
+G a e
+X 1 dear_imgui.ads
+15F14 T_Float 2|24r33 37r32 42r35 47r38
+17k9*Dear_ImGui 128e15 2|6r9 473r5
+51M17*T_Unsigned{4|71M9} 2|11r18 16r38 17r38 18r38 19r38 20r38 21r38 22r38
+X 2 dear_imgui-types.ads
+6k20 Types 1|17k9 2|473l16 473e21
+16M17*T_Backend_Flag{1|51M17} 369r56 370r56 371r56 372r56 373r56
+17M17*T_ColourEdit_Flag{1|51M17} 375r51 376r51 377r51 378r51 379r51 380r51
+. 381r51 382r51 383r51 384r51 385r51 388r51 389r51 390r51 391r51 392r51 393r51
+. 394r51 395r51 396r51 397r51 398r51 399r51 400r51 404r50
+18M17*T_Config_Flag{1|51M17} 406r55 407r55 408r55 409r55 410r55 411r55 412r55
+. 415r55 416r55
+19M17*T_Window_Flag{1|51M17} 418r60 419r60 420r60 421r60 422r60 423r60 424r60
+. 425r60 426r60 427r60 428r60 429r60 430r60 431r60 432r60 433r60 434r60 435r60
+. 436r60 437r60 438r60 439r60 440r60 441r60
+20M17*T_Slider_Flag{1|51M17} 443r50 444r50 445r50 446r50 447r50
+21M17*T_Tab_Bar_Flag{1|51M17} 449r64 450r64 451r64 452r64 453r64 454r64 455r64
+. 456r64 457r64 458r64 459r64
+22M17*T_Tab_Item_Flag{1|51M17} 461r65 462r65 463r65 464r65 465r65 466r65
+. 467r65 468r65 469r65
+24F17*T_Float_Norm{1|15F14} 27r35 32r38
+26R14*T_Colour_RGB 29e9
+27*17 R{24F17}
+27*20 G{24F17}
+27*23 B{24F17}
+31R14*T_Colour_RGBA 34e9
+32*17 R{24F17}
+32*20 G{24F17}
+32*23 B{24F17}
+32*26 A{24F17}
+36R14*T_Vector2 39e9
+37*17 X{1|15F14}
+37*20 Y{1|15F14}
+41R14*T_Vector3 44e9
+42*17 X{1|15F14}
+42*20 Y{1|15F14}
+42*23 Z{1|15F14}
+46R14*T_Vector4 49e9
+47*17 X{1|15F14}
+47*20 Y{1|15F14}
+47*23 Z{1|15F14}
+47*26 W{1|15F14}
+51E14*T_Condition 57e10 58r13
+53n17*E_Always{51E14} 60r17
+54n17*E_Once{51E14} 61r17
+55n17*E_First_Use_Ever{51E14} 62r17
+56n17*E_Appearing{51E14} 63r17
+66E14*T_ImGuiKey 208e10 210r13
+67n17*E_ImGuiKey_None{66E14} 211r17
+68n17*E_ImGuiKey_Tab{66E14} 212r17
+69n17*E_ImGuiKey_LeftArrow{66E14} 213r17
+70n17*E_ImGuiKey_RightArrow{66E14} 214r17
+71n17*E_ImGuiKey_UpArrow{66E14} 215r17
+72n17*E_ImGuiKey_DownArrow{66E14} 216r17
+73n17*E_ImGuiKey_PageUp{66E14} 217r17
+74n17*E_ImGuiKey_PageDown{66E14} 218r17
+75n17*E_ImGuiKey_Home{66E14} 219r17
+76n17*E_ImGuiKey_End{66E14} 220r17
+77n17*E_ImGuiKey_Insert{66E14} 221r17
+78n17*E_ImGuiKey_Delete{66E14} 222r17
+79n17*E_ImGuiKey_Backspace{66E14} 223r17
+80n17*E_ImGuiKey_Space{66E14} 224r17
+81n17*E_ImGuiKey_Enter{66E14} 225r17
+82n17*E_ImGuiKey_Escape{66E14} 226r17
+83n17*E_ImGuiKey_LeftCtrl{66E14} 227r17
+84n17*E_ImGuiKey_LeftShift{66E14} 228r17
+85n17*E_ImGuiKey_LeftAlt{66E14} 229r17
+86n17*E_ImGuiKey_LeftSuper{66E14} 230r17
+87n17*E_ImGuiKey_RightCtrl{66E14} 231r17
+88n17*E_ImGuiKey_RightShift{66E14} 232r17
+89n17*E_ImGuiKey_RightAlt{66E14} 233r17
+90n17*E_ImGuiKey_RightSuper{66E14} 234r17
+91n17*E_ImGuiKey_Menu{66E14} 235r17
+92n17*E_ImGuiKey_0{66E14} 236r17
+93n17*E_ImGuiKey_1{66E14} 237r17
+94n17*E_ImGuiKey_2{66E14} 238r17
+95n17*E_ImGuiKey_3{66E14} 239r17
+96n17*E_ImGuiKey_4{66E14} 240r17
+97n17*E_ImGuiKey_5{66E14} 241r17
+98n17*E_ImGuiKey_6{66E14} 242r17
+99n17*E_ImGuiKey_7{66E14} 243r17
+100n17*E_ImGuiKey_8{66E14} 244r17
+101n17*E_ImGuiKey_9{66E14} 245r17
+102n17*E_ImGuiKey_A{66E14} 246r17
+103n17*E_ImGuiKey_B{66E14} 247r17
+104n17*E_ImGuiKey_C{66E14} 248r17
+105n17*E_ImGuiKey_D{66E14} 249r17
+106n17*E_ImGuiKey_E{66E14} 250r17
+107n17*E_ImGuiKey_F{66E14} 251r17
+108n17*E_ImGuiKey_G{66E14} 252r17
+109n17*E_ImGuiKey_H{66E14} 253r17
+110n17*E_ImGuiKey_I{66E14} 254r17
+111n17*E_ImGuiKey_J{66E14} 255r17
+112n17*E_ImGuiKey_K{66E14} 256r17
+113n17*E_ImGuiKey_L{66E14} 257r17
+114n17*E_ImGuiKey_M{66E14} 258r17
+115n17*E_ImGuiKey_N{66E14} 259r17
+116n17*E_ImGuiKey_O{66E14} 260r17
+117n17*E_ImGuiKey_P{66E14} 261r17
+118n17*E_ImGuiKey_Q{66E14} 262r17
+119n17*E_ImGuiKey_R{66E14} 263r17
+120n17*E_ImGuiKey_S{66E14} 264r17
+121n17*E_ImGuiKey_T{66E14} 265r17
+122n17*E_ImGuiKey_U{66E14} 266r17
+123n17*E_ImGuiKey_V{66E14} 267r17
+124n17*E_ImGuiKey_W{66E14} 268r17
+125n17*E_ImGuiKey_X{66E14} 269r17
+126n17*E_ImGuiKey_Y{66E14} 270r17
+127n17*E_ImGuiKey_Z{66E14} 271r17
+128n17*E_ImGuiKey_F1{66E14} 272r17
+129n17*E_ImGuiKey_F2{66E14} 273r17
+130n17*E_ImGuiKey_F3{66E14} 274r17
+131n17*E_ImGuiKey_F4{66E14} 275r17
+132n17*E_ImGuiKey_F5{66E14} 276r17
+133n17*E_ImGuiKey_F6{66E14} 277r17
+134n17*E_ImGuiKey_F7{66E14} 278r17
+135n17*E_ImGuiKey_F8{66E14} 279r17
+136n17*E_ImGuiKey_F9{66E14} 280r17
+137n17*E_ImGuiKey_F10{66E14} 281r17
+138n17*E_ImGuiKey_F11{66E14} 282r17
+139n17*E_ImGuiKey_F12{66E14} 283r17
+140n17*E_ImGuiKey_Apostrophe{66E14} 284r17
+141n17*E_ImGuiKey_Comma{66E14} 285r17
+142n17*E_ImGuiKey_Minus{66E14} 286r17
+143n17*E_ImGuiKey_Period{66E14} 287r17
+144n17*E_ImGuiKey_Slash{66E14} 288r17
+145n17*E_ImGuiKey_Semicolon{66E14} 289r17
+146n17*E_ImGuiKey_Equal{66E14} 290r17
+147n17*E_ImGuiKey_LeftBracket{66E14} 291r17
+148n17*E_ImGuiKey_Backslash{66E14} 292r17
+149n17*E_ImGuiKey_RightBracket{66E14} 293r17
+150n17*E_ImGuiKey_GraveAccent{66E14} 294r17
+151n17*E_ImGuiKey_CapsLock{66E14} 295r17
+152n17*E_ImGuiKey_ScrollLock{66E14} 296r17
+153n17*E_ImGuiKey_NumLock{66E14} 297r17
+154n17*E_ImGuiKey_PrintScreen{66E14} 298r17
+155n17*E_ImGuiKey_Pause{66E14} 299r17
+156n17*E_ImGuiKey_Keypad0{66E14} 300r17
+157n17*E_ImGuiKey_Keypad1{66E14} 301r17
+158n17*E_ImGuiKey_Keypad2{66E14} 302r17
+159n17*E_ImGuiKey_Keypad3{66E14} 303r17
+160n17*E_ImGuiKey_Keypad4{66E14} 304r17
+161n17*E_ImGuiKey_Keypad5{66E14} 305r17
+162n17*E_ImGuiKey_Keypad6{66E14} 306r17
+163n17*E_ImGuiKey_Keypad7{66E14} 307r17
+164n17*E_ImGuiKey_Keypad8{66E14} 308r17
+165n17*E_ImGuiKey_Keypad9{66E14} 309r17
+166n17*E_ImGuiKey_KeypadDecimal{66E14} 310r17
+167n17*E_ImGuiKey_KeypadDivide{66E14} 311r17
+168n17*E_ImGuiKey_KeypadMultiply{66E14} 312r17
+169n17*E_ImGuiKey_KeypadSubtract{66E14} 313r17
+170n17*E_ImGuiKey_KeypadAdd{66E14} 314r17
+171n17*E_ImGuiKey_KeypadEnter{66E14} 315r17
+172n17*E_ImGuiKey_KeypadEqual{66E14} 316r17
+173n17*E_ImGuiKey_GamepadStart{66E14} 317r17
+174n17*E_ImGuiKey_GamepadBack{66E14} 318r17
+175n17*E_ImGuiKey_GamepadFaceUp{66E14} 319r17
+176n17*E_ImGuiKey_GamepadFaceDown{66E14} 320r17
+177n17*E_ImGuiKey_GamepadFaceLeft{66E14} 321r17
+178n17*E_ImGuiKey_GamepadFaceRight{66E14} 322r17
+179n17*E_ImGuiKey_GamepadDpadUp{66E14} 323r17
+180n17*E_ImGuiKey_GamepadDpadDown{66E14} 324r17
+181n17*E_ImGuiKey_GamepadDpadLeft{66E14} 325r17
+182n17*E_ImGuiKey_GamepadDpadRight{66E14} 326r17
+183n17*E_ImGuiKey_GamepadL1{66E14} 327r17
+184n17*E_ImGuiKey_GamepadR1{66E14} 328r17
+185n17*E_ImGuiKey_GamepadL2{66E14} 329r17
+186n17*E_ImGuiKey_GamepadR2{66E14} 330r17
+187n17*E_ImGuiKey_GamepadL3{66E14} 331r17
+188n17*E_ImGuiKey_GamepadR3{66E14} 332r17
+189n17*E_ImGuiKey_GamepadLStickUp{66E14} 333r17
+190n17*E_ImGuiKey_GamepadLStickDown{66E14} 334r17
+191n17*E_ImGuiKey_GamepadLStickLeft{66E14} 335r17
+192n17*E_ImGuiKey_GamepadLStickRight{66E14} 336r17
+193n17*E_ImGuiKey_GamepadRStickUp{66E14} 337r17
+194n17*E_ImGuiKey_GamepadRStickDown{66E14} 338r17
+195n17*E_ImGuiKey_GamepadRStickLeft{66E14} 339r17
+196n17*E_ImGuiKey_GamepadRStickRight{66E14} 340r17
+197n17*E_ImGuiKey_ModCtrl{66E14} 341r17
+198n17*E_ImGuiKey_ModShift{66E14} 342r17
+199n17*E_ImGuiKey_ModAlt{66E14} 343r17
+200n17*E_ImGuiKey_ModSuper{66E14} 344r17
+201n17*E_ImGuiKey_COUNT{66E14} 345r17
+354E14*T_ImGuiButton 358e10 360r13
+355n17*E_ImGuiButton_Left{354E14} 361r17
+356n17*E_ImGuiButton_Right{354E14} 362r17
+357n17*E_ImGuiButton_Middle{354E14} 363r17
+369m9*C_Backend_Flag_None{16M17}
+370m9*C_Backend_Flag_HasGamepad{16M17}
+371m9*C_Backend_Flag_HasMouseCursors{16M17}
+372m9*C_Backend_Flag_HasSetMousePos{16M17}
+373m9*C_Backend_Flag_RendererHasVtxOffset{16M17}
+375m5*C_ColourEdit_Flag_None{17M17}
+376m5*C_ColourEdit_Flag_NoAlpha{17M17}
+377m5*C_ColourEdit_Flag_NoPicker{17M17}
+378m5*C_ColourEdit_Flag_NoOptions{17M17}
+379m5*C_ColourEdit_Flag_NoSmallPreview{17M17}
+380m5*C_ColourEdit_Flag_NoInputs{17M17}
+381m5*C_ColourEdit_Flag_NoTooltip{17M17}
+382m5*C_ColourEdit_Flag_NoLabel{17M17}
+383m5*C_ColourEdit_Flag_NoSidePreview{17M17}
+384m5*C_ColourEdit_Flag_NoDragDrop{17M17}
+385m5*C_ColourEdit_Flag_NoBorder{17M17}
+388m5*C_ColourEdit_Flag_AlphaBar{17M17}
+389m5*C_ColourEdit_Flag_AlphaPreview{17M17}
+390m5*C_ColourEdit_Flag_AlphaPreviewHalf{17M17}
+391m5*C_ColourEdit_Flag_HDR{17M17}
+392m5*C_ColourEdit_Flag_DisplayRGB{17M17} 404r98
+393m5*C_ColourEdit_Flag_DisplayHSV{17M17}
+394m5*C_ColourEdit_Flag_DisplayHex{17M17}
+395m5*C_ColourEdit_Flag_Uint8{17M17} 404r71
+396m5*C_ColourEdit_Flag_Float{17M17}
+397m5*C_ColourEdit_Flag_PickerHueBar{17M17} 404r160
+398m5*C_ColourEdit_Flag_PickerHueWheel{17M17}
+399m5*C_ColourEdit_Flag_InputRGB{17M17} 404r130
+400m5*C_ColourEdit_Flag_InputHSV{17M17}
+404m5*C_ColourEdit_Flag_DefaultOptions{17M17}
+406m9*C_Config_Flag_None{18M17}
+407m9*C_Config_Flag_NavEnableKeyboard{18M17}
+408m9*C_Config_Flag_NavEnableGamepad{18M17}
+409m9*C_Config_Flag_NavEnableSetMousePos{18M17}
+410m9*C_Config_Flag_NavNoCaptureKeyboard{18M17}
+411m9*C_Config_Flag_NoMouse{18M17}
+412m9*C_Config_Flag_NoMouseCursorChange{18M17}
+415m9*C_Config_Flag_IsSRGB{18M17}
+416m9*C_Config_Flag_IsTouchScreen{18M17}
+418m9*C_Window_Flag_None{19M17}
+419m9*C_Window_Flag_NoTitleBar{19M17} 440r77
+420m9*C_Window_Flag_NoResize{19M17} 440r105
+421m9*C_Window_Flag_NoMove{19M17}
+422m9*C_Window_Flag_NoScrollbar{19M17} 440r131
+423m9*C_Window_Flag_NoScrollWithMouse{19M17}
+424m9*C_Window_Flag_NoCollapse{19M17} 440r160
+425m9*C_Window_Flag_AlwaysAutoResize{19M17}
+426m9*C_Window_Flag_NoBackground{19M17}
+427m9*C_Window_Flag_NoSavedSettings{19M17}
+428m9*C_Window_Flag_NoMouseInputs{19M17} 441r77
+429m9*C_Window_Flag_MenuBar{19M17}
+430m9*C_Window_Flag_HorizontalScrollbar{19M17}
+431m9*C_Window_Flag_NoFocusOnAppearing{19M17}
+432m9*C_Window_Flag_NoBringToFrontOnFocus{19M17}
+433m9*C_Window_Flag_AlwaysVerticalScrollbar{19M17}
+434m9*C_Window_Flag_AlwaysHorizontalScrollbar{19M17}
+435m9*C_Window_Flag_AlwaysUseWindowPadding{19M17}
+436m9*C_Window_Flag_NoNavInputs{19M17} 439r77 441r108
+437m9*C_Window_Flag_NoNavFocus{19M17} 439r106 441r137
+438m9*C_Window_Flag_UnsavedDocument{19M17}
+439m9*C_Window_Flag_NoNav{19M17}
+440m9*C_Window_Flag_NoDecoration{19M17}
+441m9*C_Window_Flag_NoInputs{19M17}
+443m9*C_Slider_Flag_None{20M17}
+444m9*C_Slider_Flag_AlwaysClamp{20M17}
+445m9*C_Slider_Flag_Logarithmic{20M17}
+446m9*C_Slider_Flag_NoRoundToFormat{20M17}
+447m9*C_Slider_Flag_NoInput{20M17}
+449m9*C_Tab_Bar_Flag_None{21M17}
+450m9*C_Tab_Bar_Flag_Reorderable{21M17}
+451m9*C_Tab_Bar_Flag_AutoSelectNewTabs{21M17}
+452m9*C_Tab_Bar_Flag_TabListPopupButton{21M17}
+453m9*C_Tab_Bar_Flag_NoCloseWithMiddleMouseButton{21M17}
+454m9*C_Tab_Bar_Flag_NoTabListScrollingButtons{21M17}
+455m9*C_Tab_Bar_Flag_NoTooltip{21M17}
+456m9*C_Tab_Bar_Flag_FittingPolicyResizeDown{21M17} 458r82 459r82
+457m9*C_Tab_Bar_Flag_FittingPolicyScroll{21M17} 458r124
+458m9*C_Tab_Bar_Flag_FittingPolicyMask{21M17}
+459m9*C_Tab_Bar_Flag_FittingPolicyDefault{21M17}
+461m9*C_Tab_Item_Flag_None{22M17}
+462m9*C_Tab_Item_Flag_UnsavedDocument{22M17}
+463m9*C_Tab_Item_Flag_SetSelected{22M17}
+464m9*C_Tab_Item_Flag_NoCloseWithMiddleMouseButton{22M17}
+465m9*C_Tab_Item_Flag_NoPushId{22M17}
+466m9*C_Tab_Item_Flag_NoTooltip{22M17}
+467m9*C_Tab_Item_Flag_NoReorder{22M17}
+468m9*C_Tab_Item_Flag_Leading{22M17}
+469m9*C_Tab_Item_Flag_Trailing{22M17}
+X 4 i-c.ads
+71M9*unsigned
+

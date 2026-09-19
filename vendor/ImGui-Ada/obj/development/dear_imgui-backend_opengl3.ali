@@ -1,0 +1,114 @@
+V "GNAT Lib v16"
+A -Og
+A -gnatA
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U dear_imgui.backend_opengl3%b  dear_imgui-backend_opengl3.adb  fe9962e3 NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+
+U dear_imgui.backend_opengl3%s  dear_imgui-backend_opengl3.ads  e40e9530 BN EE NE OO PK GE
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+W dear_imgui.api%s	dear_imgui-api.ads	dear_imgui-api.ali
+
+D ada.ads		20260610194523 76789da1 ada%s
+D a-unccon.ads		20260610194523 0e9b276f ada.unchecked_conversion%s
+D dear_imgui.ads	20260804204853 0c015b54 dear_imgui%s
+D dear_imgui-api.ads	20260804204853 ecc20958 dear_imgui.api%s
+D dear_imgui-backend_opengl3.ads  20260804204853 04cdc73c dear_imgui.backend_opengl3%s
+D dear_imgui-backend_opengl3.adb  20260804204853 fa54a5df dear_imgui.backend_opengl3%b
+D interfac.ads		20260610194523 9111f9c1 interfaces%s
+D i-c.ads		20260610194523 dbdd3be7 interfaces.c%s
+D i-cexten.ads		20260610194523 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20260610194523 49eced87 interfaces.c.strings%s
+D system.ads		20260610194523 8a611ac3 system%s
+D s-exctab.ads		20260610194523 91bef6ef system.exception_table%s
+D s-parame.ads		20260610194523 a1aeab5c system.parameters%s
+D s-stalib.ads		20260610194523 1c9580f6 system.standard_library%s
+G a e
+G c Z s b [backend_opengl3 dear_imgui 14 20 none]
+X 3 dear_imgui.ads
+17k9*Dear_ImGui 128e15 5|7r6 12r35 14r9 83r5 6|7r14 51r5
+52B17*T_Bool{9|60E12} 5|44r46 54r47 76r89 6|12r18 32r34
+75P17 T_Chars_Ptr{10|65P9} 5|76r43 6|13r18 31r34
+X 4 dear_imgui-api.ads
+11k20 API 10649e19 5|7w17
+46R9 ImDrawData 5|38r62[12]
+1284R9 ImDrawData
+X 5 dear_imgui-backend_opengl3.ads
+12K22 P_API[4|11] 38r56
+14k20 Backend_OpenGL3 3|17k9 5|12z22 71E9 83l16 83e31 6|7b25 51l16 51t31
+19X9*EX_INITIALISATION_ERROR 6|23r31 44r31
+24U19*Init 6|19b19 26l13 26t17
+26U19*Init 26>25 6|29b19 47l13 47t17
+26a25 GLSL_Version{string} 6|29b25 36r68
+28U19*Shutdown
+33U19*Begin_Frame
+38U19*Render_Draw_Data 38^37
+38p37 draw_data(4|1284R9[12])
+44V18*Create_Fonts_Texture{3|52E17}
+49U19*Destroy_Fonts_Texture
+54V18*Create_Device_Objects{3|52E17}
+59U19*Destroy_Device_Objects
+71p9 C_Default_GLSL_Version{10|65P9} 76r58
+76V18 Init_Raw{3|52E17} 76>28 6|22s24 38s27
+76p28 glsl_version{3|75P17}
+X 6 dear_imgui-backend_opengl3.adb
+31p17 Version_String{3|75P17} 36m17 38r37 40m44 40r44
+32b17 Result{3|52E17} 38m17 43r24
+X 7 interfac.ads
+47K9*Interfaces 5|71r43 71r77 6|36r35 40r17 7|247e15
+X 8 i-c.ads
+33K20*C 5|71r54 71r88 6|36r46 40r28 8|605e17
+96B9*C_bool<boolean>
+X 9 i-cexten.ads
+60B12*bool{8|96E9}
+X 10 i-cstrin.ads
+48K22*Strings 5|71r56 71r90 6|36r48 40r30 10|183e25
+65P9*chars_ptr 5|71r64
+71p4*Null_Ptr{65P9} 5|71r98
+87V13*New_String{65P9} 6|36s56
+93U14*Free 6|40s38
+

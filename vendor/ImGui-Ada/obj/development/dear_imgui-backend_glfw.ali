@@ -1,0 +1,210 @@
+V "GNAT Lib v16"
+A -Og
+A -gnatA
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -mmacosx-version-min=28.0.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P SS ZX
+
+RN
+RV NO_DISPATCH
+RV NO_EXCEPTIONS
+RV NO_FINALIZATION
+RV NO_FLOATING_POINT
+RV NO_UNCHECKED_CONVERSION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U dear_imgui.backend_glfw%b  dear_imgui-backend_glfw.adb  56c4e9cd NE OO PK GE
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.unchecked_conversion%s
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+
+U dear_imgui.backend_glfw%s  dear_imgui-backend_glfw.ads  c5590bc3 BN EE NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.finalization%s	a-finali.ads		a-finali.ali
+W dear_imgui%s		dear_imgui.adb		dear_imgui.ali
+W glfw%s		glfw.adb		glfw.ali
+W glfw.monitors%s	glfw-monitors.adb	glfw-monitors.ali
+W glfw.windows%s	glfw-windows.adb	glfw-windows.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20260610194523 76789da1 ada%s
+D a-except.ads		20260610194523 8699d7ff ada.exceptions%s
+D a-finali.ads		20260610194523 099c16e4 ada.finalization%s
+D a-stream.ads		20260610194523 cb01a8f8 ada.streams%s
+D a-string.ads		20260610194523 90ac6797 ada.strings%s
+D a-sttebu.ads		20260610194523 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20260610194523 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20260610194523 2dbf449c ada.tags%s
+D a-unccon.ads		20260610194523 0e9b276f ada.unchecked_conversion%s
+D dear_imgui.ads	20260804204853 0c015b54 dear_imgui%s
+D dear_imgui-backend_glfw.ads  20260804204853 d2889771 dear_imgui.backend_glfw%s
+D dear_imgui-backend_glfw.adb  20260804204853 8ad759d3 dear_imgui.backend_glfw%b
+D glfw.ads		20260804204940 ada68d8e glfw%s
+D glfw-input.ads	20260804204940 cc20d32a glfw.input%s
+D glfw-input-keys.ads	20260804204940 b0d52173 glfw.input.keys%s
+D glfw-input-mouse.ads	20260804204940 725dacf3 glfw.input.mouse%s
+D glfw-monitors.ads	20260804204940 8a5ba4bb glfw.monitors%s
+D glfw-windows.ads	20260804204940 12766f7a glfw.windows%s
+D interfac.ads		20260610194523 9111f9c1 interfaces%s
+D i-c.ads		20260610194523 dbdd3be7 interfaces.c%s
+D i-cexten.ads		20260610194523 be1de098 interfaces.c.extensions%s
+D i-cstrin.ads		20260610194523 49eced87 interfaces.c.strings%s
+D system.ads		20260610194523 8a611ac3 system%s
+D s-exctab.ads		20260610194523 91bef6ef system.exception_table%s
+D s-finpri.ads		20260610194523 5970d55a system.finalization_primitives%s
+D s-finroo.ads		20260610194523 0a7c3ed4 system.finalization_root%s
+D s-oscons.ads		20260626180535 42ad9981 system.os_constants%s
+D s-oslock.ads		20260610194523 bcc789d2 system.os_locks%s
+D s-parame.ads		20260610194523 a1aeab5c system.parameters%s
+D s-pooglo.ads		20260610194523 91708d21 system.pool_global%s
+D s-putima.ads		20260610194523 1b989439 system.put_images%s
+D s-retsta.ads		20260610194523 0f6b06cb system.return_stack%s
+D s-secsta.ads		20260610194523 578279f5 system.secondary_stack%s
+D s-soflin.ads		20260610194523 5d88fdea system.soft_links%s
+D s-stache.ads		20260610194523 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20260610194523 1c9580f6 system.standard_library%s
+D s-stoele.ads		20260610194523 ccded4e8 system.storage_elements%s
+D s-stopoo.ads		20260610194523 45459446 system.storage_pools%s
+D s-stratt.ads		20260610194523 80b8dafb system.stream_attributes%s
+D s-traent.ads		20260610194523 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20260610194523 fa2a7f59 system.unsigned_types%s
+G a e
+G c Z s b [backend_glfw dear_imgui 16 20 none]
+X 1 ada.ads
+18K9*Ada 22e8 11|7r14 152r35 12|2r6 14r33
+X 3 a-finali.ads
+40K13*Finalization 68e21 11|7w18 152r39
+43H9*Controlled<26|40R9> 59e72 11|152r52
+46U14*Initialize<26|48p14>
+47U14*Adjust<26|46p14>
+48U14*Finalize<26|47p14>
+X 9 a-unccon.ads
+23v14*Unchecked_Conversion 12|2w10 14r37
+X 10 dear_imgui.ads
+17k9*Dear_ImGui 128e15 11|16r9 185r5 12|4r14 60r5
+47I17*T_Integer{20|62I9} 11|74r27 83r27 101r26 102r26 103r26 120r28 121r28
+. 122r28 123r28 139r27
+51M17*T_Unsigned{20|71M9} 11|131r26
+52B17*T_Bool{21|60E12} 11|161r37 162r18 169r37 170r18 177r37 178r18 12|9r18
+. 26r83 39r83 52r82
+53F17*T_Double{20|102F9} 11|92r26 93r26 111r27 112r27
+X 11 dear_imgui-backend_glfw.ads
+16k20 Backend_Glfw 10|17k9 11|152E14 185l16 185e28 12|4b25 60l16 60t28
+21X9*EX_INITIALISATION_ERROR 12|27r31 40r31 53r31
+26R17*GLFWwindow{18|14R9} 33r40 39r40 45r40 60r54 65r54 73r34 82r34 91r33
+. 100r33 110r34 119r35 130r33 12|14r59 26r54 39r54 52r53
+27R17*GLFWmonitor{17|23R9} 138r34
+32U19*Init_For_OpenGL 33>17 34>17 12|20b19 30l13 30t28
+33c17 Window<18|14R9> 12|21b17 26r66
+34b17 install_callbacks{boolean} 12|22b17 26r91
+38U19*Init_For_Vulkan 39>17 40>17 12|33b19 43l13 43t28
+39c17 Window<18|14R9> 12|34b17 39r66
+40b17 install_callbacks{boolean} 12|35b17 39r91
+44U19*Init_For_Other 45>17 46>17 12|46b19 56l13 56t27
+45c17 Window<18|14R9> 12|47b17 52r65
+46b17 install_callbacks{boolean} 12|48b17 52r90
+50U19*Shutdown
+55U19*Begin_Frame
+60U19*Install_Callbacks 60^38
+60p38 window(26R17)
+65U19*Restore_Callbacks 65^38
+65p38 window(26R17)
+72U19*Window_Focus_Callback 73^17 74>17
+73p17 window(26R17)
+74i17 focused{10|47I17}
+81U19*Cursor_Enter_Callback 82^17 83>17
+82p17 window(26R17)
+83i17 entered{10|47I17}
+90U19*Cursor_Pos_Callback 91^17 92>17 93>17
+91p17 window(26R17)
+92f17 x{10|53F17}
+93f17 y{10|53F17}
+99U19*Mouse_Button_Callback 100^17 101>17 102>17 103>17
+100p17 window(26R17)
+101i17 button{10|47I17}
+102i17 action{10|47I17}
+103i17 mods{10|47I17}
+109U19*Scroll_Callback 110^17 111>17 112>17
+110p17 window(26R17)
+111f17 xoffset{10|53F17}
+112f17 yoffset{10|53F17}
+118U19*Key_Callback 119^17 120>17 121>17 122>17 123>17
+119p17 window(26R17)
+120i17 key{10|47I17}
+121i17 scancode{10|47I17}
+122i17 action{10|47I17}
+123i17 mods{10|47I17}
+129U19*Char_Callback 130^17 131>17
+130p17 window(26R17)
+131m17 c{10|51M17}
+137U19*Monitor_Callback 138^17 139>17
+138p17 monitor(27R17)
+139i17 event{10|47I17}
+152R14 T_Glfw_Window<3|43R9> 3|46P14 47P14 48P14 11|154e19 12|14r71
+153m17 Handle{23|67M9} 12|26r75 39r75 52r74
+159V18 Init_For_OpenGL_Raw{10|52E17} 160>17 161>17 12|26s24
+160m17 window{23|67M9}
+161b17 install_callbacks{10|52E17}
+167V18 Init_For_Vulkan_Raw{10|52E17} 168>17 169>17 12|39s24
+168m17 window{23|67M9}
+169b17 install_callbacks{10|52E17}
+175V18 Init_For_Other_Raw{10|52E17} 176>17 177>17 12|52s24
+176m17 window{23|67M9}
+177b17 install_callbacks{10|52E17}
+X 12 dear_imgui-backend_glfw.adb
+14V18 Convert[9|23]{11|152R14} 26s45 39s45 52s44
+X 13 glfw.ads
+6K9*Glfw 11|10r6 11r6 26r31 27r32 12|21r40 34r40 47r40 13|43e9
+X 17 glfw-monitors.ads
+6K14*Monitors 11|11w11 27r37 17|59e18
+23R9*Monitor 11|27r46 17|50e14
+X 18 glfw-windows.ads
+12K14*Windows 11|10w11 26r36 12|21r45 34r45 47r45 18|136e17
+14R9*Window<3|43R9> 11|26r44 12|21r53 34r53 47r53 18|132e14
+X 20 i-c.ads
+62I9*int<integer>
+71M9*unsigned
+96B9*C_bool<boolean>
+102F9*double<long_float>
+X 21 i-cexten.ads
+60B12*bool{20|96E9}
+X 23 system.ads
+37K9*System 11|8w14 153r26 153r44 160r40 168r40 176r40 23|173e11
+67M9*Address 11|153r33 160r47 168r47 176r47
+69m4*Null_Address{67M9} 11|153r51
+

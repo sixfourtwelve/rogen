@@ -98,7 +98,7 @@ package body GPU is
    procedure Clear_Screen is
       Flags : constant GL.Buffers.Buffer_Bits :=
         GL.Buffers.Buffer_Bits'
-          (Depth => False, Accum => False, Stencil => False, Color => True);
+          (Depth => True, Accum => False, Stencil => False, Color => True);
    begin
       GL.Buffers.Clear (Flags);
    end Clear_Screen;

@@ -2,6 +2,7 @@ with GL.Objects.Buffers;
 with GL.Objects.Programs;
 with GL.Objects.Shaders;
 with GL.Objects.Vertex_Arrays;
+with Glfw;
 
 package GPU is
 
@@ -11,7 +12,7 @@ package GPU is
    package Vertex_Arrays renames GL.Objects.Vertex_Arrays;
 
    procedure Initialize;
-   procedure BeginGPU;
+   procedure BeginGPU (DeltaTime : Glfw.Seconds);
    procedure EndGPU;
    procedure Shutdown;
 

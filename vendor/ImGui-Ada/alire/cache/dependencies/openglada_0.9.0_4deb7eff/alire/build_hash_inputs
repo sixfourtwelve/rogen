@@ -1,0 +1,2 @@
+profile:openglada=RELEASE
+switches:openglada=-O3,-fdata-sections,-ffunction-sections,-gnatW8,-gnatn

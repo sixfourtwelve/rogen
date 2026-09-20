@@ -4,11 +4,21 @@ with GL.Context;
 with Ada.Text_IO;
 with GL.Types;
 with GL.Uniforms;
-with Shaders; use Shaders;
+with Shaders;              use Shaders;
+with Generic_ImGui;
+with Interfaces.C.Strings; use Interfaces.C.Strings;
+with Interfaces.C;
+
+with Ada.Numerics.Generic_Elementary_Functions;
 
 package body GPU is
-
    use Ada.Text_IO;
+
+   package ImGui is new Generic_ImGui (Float);
+   package Elementary_Functions is new
+     Ada.Numerics.Generic_Elementary_Functions (GL.Types.Single);
+
+   Elapsed_Time : GL.Types.Single := 0.0;
 
    procedure Load_Data is
       use GL.Types;
@@ -41,30 +51,59 @@ package body GPU is
       Load_Data;
    end Initialize;
 
-   procedure BeginGPU is
+   procedure BeginGPU (DeltaTime : Glfw.Seconds) is
+      use GL.Types;
+      use Interfaces.C;
+      use ImGui.API;
+
       Color_Location  : GL.Uniforms.Uniform;
       Offset_Location : GL.Uniforms.Uniform;
+
+      Speed : constant Single := 1.0;
+
+      R : Single;
+      G : Single;
+      B : Single;
+
+      X                  : Single;
+      Y                  : Single;
+      Debug_Window_Flags : constant ImGuiWindowFlags :=
+        ImGuiWindowFlags_AlwaysAutoResize
+        or ImGuiWindowFlags_NoMove
+        or ImGuiWindowFlags_NoResize;
    begin
+      Elapsed_Time := Elapsed_Time + Single (DeltaTime);
+
       Clear_Screen;
       VAO.Bind;
       Shader.Use_Program;
 
+      R := 0.5 + 0.5 * Elementary_Functions.Sin (Elapsed_Time * Speed);
+
+      G := 0.5 + 0.5 * Elementary_Functions.Sin (Elapsed_Time * Speed + 2.094);
+
+      B := 0.5 + 0.5 * Elementary_Functions.Sin (Elapsed_Time * Speed + 4.189);
+
       Color_Location := Shader.Uniform_Location ("u_Color");
+
       GL.Uniforms.Set_Single
-        (Location => Color_Location,
-         V1       => 1.0,
-         V2       => 1.0,
-         V3       => 1.0,
-         V4       => 1.0);
+        (Location => Color_Location, V1 => R, V2 => G, V3 => B, V4 => 1.0);
 
       Offset_Location := Shader.Uniform_Location ("u_Offset");
-      GL.Uniforms.Set_Single
-        (Location => Offset_Location,
-         V1       => 0.0,
-         V2       => 0.0,
-         V3       => 0.0,
-         V4       => 0.0);
 
+      X := 0.5 * Elementary_Functions.Sin (Elapsed_Time * Speed);
+      Y := 0.5 * Elementary_Functions.Cos (Elapsed_Time * Speed);
+
+      GL.Uniforms.Set_Single
+        (Location => Offset_Location, V1 => X, V2 => Y, V3 => 0.0, V4 => 0.0);
+
+      if igBegin
+           (New_String ("Debug Window"), null, flags => Debug_Window_Flags)
+      then
+         igText (New_String ("Testing"));
+         igSliderFloat (New_String ("Colour"), v => Float (R), 0.0, 1.0);
+      end if;
+      igEnd;
    end BeginGPU;
 
    procedure EndGPU is

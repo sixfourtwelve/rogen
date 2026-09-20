@@ -19,7 +19,7 @@ RR NO_ELABORATION_CODE
 
 U imgui_config%s	imgui_config.ads	73470afd NE OO PU PK
 
-D imgui_config.ads	20260919162905 73470afd imgui_config%s
+D imgui_config.ads	20260919205819 73470afd imgui_config%s
 D system.ads		20260610194523 8a611ac3 system%s
 G a e
 X 1 imgui_config.ads

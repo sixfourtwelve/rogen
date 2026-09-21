@@ -1,4 +1,3 @@
-with Ada.Numerics.Generic_Elementary_Functions;
 with Ada.Text_IO;
 with Generic_ImGui;
 with GL.Attributes;
@@ -9,19 +8,18 @@ with Interfaces.C.Strings;  use Interfaces.C.Strings;
 with Shaders;
 with System;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Math;
 
 package body GPU is
    use Ada.Text_IO;
 
    package ImGui is new Generic_ImGui (Float);
-   package Elementary_Functions is new
-     Ada.Numerics.Generic_Elementary_Functions (GL.Types.Single);
 
    procedure Clear_Screen is
-      Flags : constant GL.Buffers.Buffer_Bits :=
-        (Depth => True, Accum => False, Stencil => False, Color => True);
    begin
-      GL.Buffers.Clear (Flags);
+      GL.Buffers.Clear
+        (Bits =>
+           (Depth => True, Accum => False, Stencil => False, Color => True));
    end Clear_Screen;
 
    procedure Create (Self : in out Renderer) is
@@ -123,8 +121,8 @@ package body GPU is
       Self.Texture.Bind;
       Self.Program.Use_Program;
 
-      X := 0.5 * Elementary_Functions.Cos (Self.Elapsed_Time * Speed);
-      Y := 0.5 * Elementary_Functions.Sin (Self.Elapsed_Time * Speed);
+      X := 0.5 * Math.Singles.Cos (Self.Elapsed_Time * Speed);
+      Y := 0.5 * Math.Singles.Sin (Self.Elapsed_Time * Speed);
 
       GL.Uniforms.Set_Single
         (Location => Self.Uniforms.Offset,

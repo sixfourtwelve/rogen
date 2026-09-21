@@ -55,8 +55,7 @@ package body Window is
 
    function Handle
      (Self : aliased in out Instance)
-      return not null access Glfw.Windows.Window'Class
-   is
+      return not null access Glfw.Windows.Window'Class is
    begin
       if not Self.Window_Opened then
          raise Program_Error with "window is not open";

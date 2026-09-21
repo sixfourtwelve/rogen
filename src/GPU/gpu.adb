@@ -4,13 +4,11 @@ with Generic_ImGui;
 with GL.Attributes;
 with GL.Buffers;
 with GL.Context;
-with GL.Images;
-with GL.Objects.Textures.Targets;
-with GL.Pixels;
 with Interfaces.C;
-with Interfaces.C.Strings; use Interfaces.C.Strings;
+with Interfaces.C.Strings;  use Interfaces.C.Strings;
 with Shaders;
 with System;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 
 package body GPU is
    use Ada.Text_IO;
@@ -91,9 +89,8 @@ package body GPU is
          Offset     => 3 * Component_Size);
       GL.Attributes.Enable_Vertex_Attrib_Array (1);
 
-      GL.Objects.Textures.Set_Active_Unit (0);
-      GL.Images.Load_File_To_Texture
-        ("assets/textures/orange/texture_01.png", Self.Texture, GL.Pixels.RGB);
+      Self.Texture.Create
+        (To_Unbounded_String ("assets/textures/orange/texture_01.png"));
 
       Self.Program.Use_Program;
       GL.Uniforms.Set_Int (Self.Program.Uniform_Location ("color_texture"), 0);
@@ -123,8 +120,7 @@ package body GPU is
       Clear_Screen;
       Self.VAO.Bind;
 
-      GL.Objects.Textures.Set_Active_Unit (0);
-      GL.Objects.Textures.Targets.Texture_2D.Bind (Self.Texture);
+      Self.Texture.Bind;
       Self.Program.Use_Program;
 
       X := 0.5 * Elementary_Functions.Cos (Self.Elapsed_Time * Speed);
@@ -160,14 +156,7 @@ package body GPU is
    procedure Finalize (Self : in out Renderer) is
       Null_Buffer  : GL.Objects.Buffers.Buffer;
       Null_Program : GL.Objects.Programs.Program;
-      Null_Texture : GL.Objects.Textures.Texture;
    begin
-      if Self.Texture.Initialized then
-         Null_Texture.Set_Raw_Id (0, Owned => False);
-         GL.Objects.Textures.Targets.Texture_2D.Bind (Null_Texture);
-         Self.Texture.Clear;
-      end if;
-
       if Self.VAO.Initialized then
          GL.Objects.Vertex_Arrays.Null_Array_Object.Bind;
          Self.VAO.Clear;

@@ -27,3 +27,6 @@ imgui = { path='vendor/ImGui-Ada' }
 
 [environment.'case(distribution)'.homebrew]
 HOMEBREW_PREFIX.set = "/opt/homebrew"
+
+[[depends-on]]
+gid = "^9.0.0"

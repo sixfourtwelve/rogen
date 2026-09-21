@@ -33,22 +33,6 @@ package body GPU is
         Single'Size / System.Storage_Unit;
       Vertex_Stride  : constant GL.Types.Size := 5 * Component_Size;
 
-      Triangle : constant Single_Array :=
-        [-0.5,
-         -0.5,
-         0.0,
-         0.0,
-         0.0,
-         0.5,
-         -0.5,
-         0.0,
-         1.0,
-         0.0,
-         0.0,
-         0.5,
-         0.0,
-         0.5,
-         1.0];
    begin
       if Self.Program.Initialized then
          raise Program_Error with "renderer is already initialized";
@@ -67,7 +51,7 @@ package body GPU is
 
       Self.VAO.Bind;
       Array_Buffer.Bind (Self.VBO);
-      Load_Vertices (Array_Buffer, Triangle, Static_Draw);
+      Load_Vertices (Array_Buffer, Math.Triangle_Vertices, Static_Draw);
 
       GL.Attributes.Set_Vertex_Attrib_Pointer
         (Index      => 0,

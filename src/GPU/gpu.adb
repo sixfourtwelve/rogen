@@ -5,14 +5,11 @@ with GL.Attributes;
 with GL.Buffers;
 with GL.Context;
 with GL.Images;
-with GL.Objects.Textures;
 with GL.Objects.Textures.Targets;
 with GL.Pixels;
-with GL.Types;
-with GL.Uniforms;
 with Interfaces.C;
 with Interfaces.C.Strings; use Interfaces.C.Strings;
-with Shaders;              use Shaders;
+with Shaders;
 with System;
 
 package body GPU is
@@ -22,10 +19,14 @@ package body GPU is
    package Elementary_Functions is new
      Ada.Numerics.Generic_Elementary_Functions (GL.Types.Single);
 
-   Elapsed_Time : GL.Types.Single := 0.0;
-   Texture      : GL.Objects.Textures.Texture;
+   procedure Clear_Screen is
+      Flags : constant GL.Buffers.Buffer_Bits :=
+        (Depth => True, Accum => False, Stencil => False, Color => True);
+   begin
+      GL.Buffers.Clear (Flags);
+   end Clear_Screen;
 
-   procedure Load_Data is
+   procedure Create (Self : in out Renderer) is
       use GL.Objects.Buffers;
       use GL.Types;
 
@@ -53,8 +54,23 @@ package body GPU is
          0.5,
          1.0];
    begin
-      VAO.Bind;
-      Array_Buffer.Bind (VBO);
+      if Self.Program.Initialized then
+         raise Program_Error with "renderer is already initialized";
+      end if;
+
+      Put_Line ("Renderer initialized.");
+      Put_Line (GL.Context.Version_String);
+      GL.Buffers.Set_Color_Clear_Value ([0.19, 0.19, 0.19, 1.0]);
+
+      Self.Program :=
+        Shaders.Make_Shader_Program
+          ("assets/shaders/triangle.vert", "assets/shaders/triangle.frag");
+
+      Self.VAO.Initialize_Id;
+      Self.VBO.Initialize_Id;
+
+      Self.VAO.Bind;
+      Array_Buffer.Bind (Self.VBO);
       Load_Vertices (Array_Buffer, Triangle, Static_Draw);
 
       GL.Attributes.Set_Vertex_Attrib_Pointer
@@ -77,34 +93,17 @@ package body GPU is
 
       GL.Objects.Textures.Set_Active_Unit (0);
       GL.Images.Load_File_To_Texture
-        ("assets/textures/orange/texture_01.png", Texture, GL.Pixels.RGB);
-   end Load_Data;
+        ("assets/textures/orange/texture_01.png", Self.Texture, GL.Pixels.RGB);
 
-   procedure Initialize is
-   begin
-      Put_Line ("Renderer initialized.");
-      Put_Line (GL.Context.Version_String);
-      GL.Buffers.Set_Color_Clear_Value ([0.19, 0.19, 0.19, 1.0]);
+      Self.Program.Use_Program;
+      GL.Uniforms.Set_Int (Self.Program.Uniform_Location ("color_texture"), 0);
+      Self.Uniforms.Offset := Self.Program.Uniform_Location ("u_Offset");
+   end Create;
 
-      Shader :=
-        Make_Shader_Program
-          ("assets/shaders/triangle.vert", "assets/shaders/triangle.frag");
-
-      VAO.Initialize_Id;
-      VBO.Initialize_Id;
-      Load_Data;
-
-      Shader.Use_Program;
-      GL.Uniforms.Set_Int (Shader.Uniform_Location ("color_texture"), 0);
-   end Initialize;
-
-   -- GPU SHIT
-   procedure BeginGPU (DeltaTime : Glfw.Seconds) is
+   procedure Begin_Frame (Self : in out Renderer; Delta_Time : Glfw.Seconds) is
       use GL.Types;
       use Interfaces.C;
       use ImGui.API;
-
-      Offset_Location : GL.Uniforms.Uniform;
 
       Speed : constant Single := 1.0;
 
@@ -115,23 +114,28 @@ package body GPU is
         or ImGuiWindowFlags_NoMove
         or ImGuiWindowFlags_NoResize;
    begin
-      Elapsed_Time := Elapsed_Time + Single (DeltaTime);
+      if not Self.Program.Initialized then
+         raise Program_Error with "renderer is not initialized";
+      end if;
+
+      Self.Elapsed_Time := Self.Elapsed_Time + Single (Delta_Time);
 
       Clear_Screen;
-      VAO.Bind;
+      Self.VAO.Bind;
 
       GL.Objects.Textures.Set_Active_Unit (0);
-      GL.Objects.Textures.Targets.Texture_2D.Bind (Texture);
+      GL.Objects.Textures.Targets.Texture_2D.Bind (Self.Texture);
+      Self.Program.Use_Program;
 
-      Shader.Use_Program;
-
-      Offset_Location := Shader.Uniform_Location ("u_Offset");
-
-      X := 0.5 * Elementary_Functions.Cos (Elapsed_Time * Speed);
-      Y := 0.5 * Elementary_Functions.Sin (Elapsed_Time * Speed);
+      X := 0.5 * Elementary_Functions.Cos (Self.Elapsed_Time * Speed);
+      Y := 0.5 * Elementary_Functions.Sin (Self.Elapsed_Time * Speed);
 
       GL.Uniforms.Set_Single
-        (Location => Offset_Location, V1 => X, V2 => Y, V3 => 0.0, V4 => 0.0);
+        (Location => Self.Uniforms.Offset,
+         V1       => X,
+         V2       => Y,
+         V3       => 0.0,
+         V4       => 0.0);
 
       if igBegin
            (New_String ("Debug Window"), null, flags => Debug_Window_Flags)
@@ -139,50 +143,47 @@ package body GPU is
          igText (New_String ("Testing"));
       end if;
       igEnd;
-   end BeginGPU;
+   end Begin_Frame;
 
-   procedure EndGPU is
+   procedure End_Frame (Self : in out Renderer) is
    begin
-      Vertex_Arrays.Draw_Arrays
+      if not Self.VAO.Initialized then
+         raise Program_Error with "renderer is not initialized";
+      end if;
+
+      Self.VAO.Bind;
+      GL.Objects.Vertex_Arrays.Draw_Arrays
         (Mode => GL.Types.Triangles, First => 0, Count => 3);
-   end EndGPU;
+   end End_Frame;
 
-   -- Cleanup
-
-   procedure Shutdown is
-      Null_Buffer  : Buffers.Buffer;
-      Null_Program : Programs.Program;
+   overriding
+   procedure Finalize (Self : in out Renderer) is
+      Null_Buffer  : GL.Objects.Buffers.Buffer;
+      Null_Program : GL.Objects.Programs.Program;
       Null_Texture : GL.Objects.Textures.Texture;
    begin
-      if Shader.Initialized then
-         Null_Program.Set_Raw_Id (0, Owned => False);
-         Null_Program.Use_Program;
-         Shader.Clear;
-      end if;
-
-      if VAO.Initialized then
-         Vertex_Arrays.Null_Array_Object.Bind;
-         VAO.Clear;
-      end if;
-
-      if VBO.Initialized then
-         Null_Buffer.Set_Raw_Id (0, Owned => False);
-         Buffers.Array_Buffer.Bind (Null_Buffer);
-         VBO.Clear;
-      end if;
-
-      if Texture.Initialized then
+      if Self.Texture.Initialized then
          Null_Texture.Set_Raw_Id (0, Owned => False);
          GL.Objects.Textures.Targets.Texture_2D.Bind (Null_Texture);
-         Texture.Clear;
+         Self.Texture.Clear;
       end if;
-   end Shutdown;
 
-   procedure Clear_Screen is
-      Flags : constant GL.Buffers.Buffer_Bits :=
-        GL.Buffers.Buffer_Bits'
-          (Depth => True, Accum => False, Stencil => False, Color => True);
-   begin
-      GL.Buffers.Clear (Flags);
-   end Clear_Screen;
+      if Self.VAO.Initialized then
+         GL.Objects.Vertex_Arrays.Null_Array_Object.Bind;
+         Self.VAO.Clear;
+      end if;
+
+      if Self.VBO.Initialized then
+         Null_Buffer.Set_Raw_Id (0, Owned => False);
+         GL.Objects.Buffers.Array_Buffer.Bind (Null_Buffer);
+         Self.VBO.Clear;
+      end if;
+
+      if Self.Program.Initialized then
+         Null_Program.Set_Raw_Id (0, Owned => False);
+         Null_Program.Use_Program;
+         Self.Program.Clear;
+      end if;
+   end Finalize;
+
 end GPU;

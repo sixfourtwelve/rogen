@@ -3,28 +3,24 @@ with Generic_ImGui;
 package body ImGui_Layer is
    package ImGui is new Generic_ImGui (Float);
 
-   Context_Initialized        : Boolean := False;
-   Glfw_Backend_Initialized   : Boolean := False;
-   OpenGL_Backend_Initialized : Boolean := False;
-
-   procedure Initialize (Window : Glfw.Windows.Window'Class) is
+   procedure Create (Self : in out UI; Window : Glfw.Windows.Window'Class) is
    begin
       ImGui.Contexts.Initialise;
-      Context_Initialized := True;
+      Self.Context_Initialized := True;
 
       ImGui.API.igStyleColorsDark;
 
       ImGui.Backend_Glfw.Init_For_OpenGL
         (Window => Window, install_callbacks => True);
-      Glfw_Backend_Initialized := True;
+      Self.Glfw_Backend_Initialized := True;
 
       ImGui.Backend_OpenGL3.Init ("#version 410 core");
-      OpenGL_Backend_Initialized := True;
-   end Initialize;
+      Self.OpenGL_Backend_Initialized := True;
+   end Create;
 
-   procedure BeginLayer is
+   procedure Begin_Layer (Self : in out UI) is
    begin
-      if not OpenGL_Backend_Initialized then
+      if not Self.OpenGL_Backend_Initialized then
          raise Program_Error with "user interface is not initialized";
       end if;
 
@@ -32,29 +28,30 @@ package body ImGui_Layer is
       ImGui.Backend_Glfw.Begin_Frame;
       ImGui.Drawing.Begin_Frame;
 
-   end BeginLayer;
+   end Begin_Layer;
 
-   procedure EndLayer is
+   procedure End_Layer (Self : in out UI) is
    begin
       ImGui.Drawing.Render;
       ImGui.Backend_OpenGL3.Render_Draw_Data (ImGui.Drawing.Get_Draw_Data);
-   end EndLayer;
+   end End_Layer;
 
-   procedure Shutdown is
+   overriding
+   procedure Finalize (Self : in out UI) is
    begin
-      if OpenGL_Backend_Initialized then
+      if Self.OpenGL_Backend_Initialized then
          ImGui.Backend_OpenGL3.Shutdown;
-         OpenGL_Backend_Initialized := False;
+         Self.OpenGL_Backend_Initialized := False;
       end if;
 
-      if Glfw_Backend_Initialized then
+      if Self.Glfw_Backend_Initialized then
          ImGui.Backend_Glfw.Shutdown;
-         Glfw_Backend_Initialized := False;
+         Self.Glfw_Backend_Initialized := False;
       end if;
 
-      if Context_Initialized then
+      if Self.Context_Initialized then
          ImGui.Contexts.Destroy;
-         Context_Initialized := False;
+         Self.Context_Initialized := False;
       end if;
-   end Shutdown;
+   end Finalize;
 end ImGui_Layer;

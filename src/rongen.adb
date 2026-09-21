@@ -1,4 +1,3 @@
-with Generic_ImGui;
 with Glfw;
 with Glfw.Input;
 with Glfw.Windows;
@@ -19,16 +18,21 @@ procedure Rongen is
 
    Frame_Count : Natural := 0;
    Frame_Rate  : Natural;
+
+   Game_Window : aliased Window.Instance;
+   Renderer    : GPU.Renderer;
+   UI          : ImGui_Layer.UI;
+
 begin
-   Window.Initialize;
-   GPU.Initialize;
-   ImGui_Layer.Initialize (Window.Game_Window);
+   Game_Window.Open;
+   Renderer.Create;
+   UI.Create (Game_Window.Handle.all);
 
    Current_Time := Glfw.Time;
    Previous_Frame_Time := Current_Time;
    Fps_Window_Start := Current_Time;
 
-   while not Window.Game_Window.Should_Close loop
+   while not Game_Window.Handle.Should_Close loop
       Glfw.Input.Poll_Events;
 
       Current_Time := Glfw.Time;
@@ -37,34 +41,23 @@ begin
       Fps_Window_Elapsed := Current_Time - Fps_Window_Start;
       Frame_Count := Frame_Count + 1;
 
-      Keyboard.Handle_Event (Window.Game_Window'Access);
+      Keyboard.Handle_Event (Game_Window.Handle);
 
-      exit when Window.Game_Window.Should_Close;
+      exit when Game_Window.Handle.Should_Close;
 
-      ImGui_Layer.BeginLayer;
-      GPU.BeginGPU (DeltaTime => Delta_Time);
-      GPU.EndGPU;
-      ImGui_Layer.EndLayer;
+      UI.Begin_Layer;
+      Renderer.Begin_Frame (Delta_Time);
+      Renderer.End_Frame;
+      UI.End_Layer;
 
-      Glfw.Windows.Context.Swap_Buffers (Window.Game_Window'Access);
+      Glfw.Windows.Context.Swap_Buffers (Game_Window.Handle);
 
       if Fps_Window_Elapsed >= 1.0 then
          Frame_Rate :=
            Natural (Glfw.Seconds (Frame_Count) / Fps_Window_Elapsed);
-         Window.Game_Window.Set_Title ("Rongen -" & Frame_Rate'Image & " FPS");
+         Game_Window.Handle.Set_Title ("Rongen -" & Frame_Rate'Image & " FPS");
          Fps_Window_Start := Current_Time;
          Frame_Count := 0;
       end if;
    end loop;
-
-   Window.Destroy;
-exception
-   when others =>
-      begin
-         Window.Destroy;
-      exception
-         when others =>
-            null;
-      end;
-      raise;
 end Rongen;

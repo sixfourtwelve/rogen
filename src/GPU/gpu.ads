@@ -1,27 +1,37 @@
+with Ada.Finalization;
 with GL.Objects.Buffers;
 with GL.Objects.Programs;
-with GL.Objects.Shaders;
+with GL.Objects.Textures;
 with GL.Objects.Vertex_Arrays;
+with GL.Types;
+with GL.Uniforms;
 with Glfw;
 
 package GPU is
 
-   package Buffers renames GL.Objects.Buffers;
-   package Programs renames GL.Objects.Programs;
-   package Shaders renames GL.Objects.Shaders;
-   package Vertex_Arrays renames GL.Objects.Vertex_Arrays;
+   type Renderer is tagged limited private;
 
-   procedure Initialize;
-   procedure BeginGPU (DeltaTime : Glfw.Seconds);
-   procedure EndGPU;
-   procedure Shutdown;
+   procedure Create (Self : in out Renderer);
+   procedure Begin_Frame
+     (Self : in out Renderer; Delta_Time : Glfw.Seconds);
+   procedure End_Frame (Self : in out Renderer);
 
 private
-   procedure Clear_Screen;
 
-   procedure Load_Data;
+   type Uniform_Locations is record
+      Offset : GL.Uniforms.Uniform;
+   end record;
 
-   VAO : Vertex_Arrays.Vertex_Array_Object;
-   VBO : Buffers.Buffer;
+   type Renderer is new Ada.Finalization.Limited_Controlled with record
+      Elapsed_Time : GL.Types.Single := 0.0;
+      Texture      : GL.Objects.Textures.Texture;
+      Uniforms     : Uniform_Locations;
+      VAO          : GL.Objects.Vertex_Arrays.Vertex_Array_Object;
+      VBO          : GL.Objects.Buffers.Buffer;
+      Program      : GL.Objects.Programs.Program;
+   end record;
+
+   overriding
+   procedure Finalize (Self : in out Renderer);
 
 end GPU;

@@ -8,4 +8,6 @@
 /vendor/openglada/config/
 /vendor/miniaudio/obj/
 /vendor/miniaudio/lib/
+/vendor/cgltf/obj/
+/vendor/cgltf/lib/
 .vscode

@@ -1,4 +1,5 @@
 with "config/rongen_config.gpr";
+with "vendor/cgltf/rongen_cgltf.gpr";
 with "vendor/miniaudio/rongen_miniaudio.gpr";
 project Rongen is
 

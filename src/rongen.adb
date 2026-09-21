@@ -1,3 +1,4 @@
+with Audio;
 with Glfw;
 with Glfw.Input;
 with Glfw.Windows;
@@ -22,11 +23,14 @@ procedure Rongen is
    Game_Window : aliased Window.Instance;
    Renderer    : GPU.Renderer;
    UI          : ImGui_Layer.UI;
+   Music       : Audio.Music;
 
 begin
    Game_Window.Open;
    Renderer.Create;
    UI.Create (Game_Window.Handle.all);
+
+   Music.Create ("assets/audio/music.mp3");
 
    Current_Time := Glfw.Time;
    Previous_Frame_Time := Current_Time;

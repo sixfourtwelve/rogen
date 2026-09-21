@@ -6,4 +6,6 @@
 /vendor/openglada/lib/
 /vendor/openglada/alire/
 /vendor/openglada/config/
+/vendor/miniaudio/obj/
+/vendor/miniaudio/lib/
 .vscode
